@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --bg-color: hsl(217, 54%, 11%);
+  --hd-color: hsl(0, 0%, 100%);
+  --cd-bg-color: hsl(216, 50%, 16%);
+  --clr-primary: hsl(215, 51%, 70%);
+  --clr-accent: hsl(180, 100%, 50%);
+  --clr-break: hsl(215, 32%, 27%);
+}
+
+body {
+  background-color: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--cd-bg-color);
+  width: 375px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.322);
+  position: relative;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+}
+
+.showcase {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.showcase-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 99%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: rgba(0, 255, 255, 0.315);
+  border-radius: 10px;
+}
+
+.showcase-overlay:hover {
+    opacity: 1;
+}
+
+.showcase-icon {
+    padding: 145px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.icon {
+  width: 10px;
+}
+
+/*Typography*/
+
+a {
+  color: var(--hd-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--clr-accent);
+}
+
+.card h1 {
+  color: var(--hd-color);
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.card p {
+  color: var(--clr-primary);
+  font-size: 18px;
+}
+
+/*Structure*/
+
+.crd-info {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description {
+  margin: 10px 0;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.pricing,
+.time {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pricing > p {
+  color: var(--clr-accent);
+  font-weight: 600;
+}
+
+hr {
+  margin: 10px auto;
+  width: 100%;
+  color: var(--clr-break);
+  background-color: var(--clr-break);
+  height: 2px;
+}
+
+.crd-footer {
+  padding: 5px;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile {
+  width: 40px;
+  background-color: var(--hd-color);
+  border-radius: 50%;
+  padding: 1px;
+}
